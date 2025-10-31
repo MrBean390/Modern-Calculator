@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+
+}
+
+body,
+  body.dark-mode {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s ease, color 0.4s ease;
+
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    width: 280px;
+    height: 74vh;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.theme {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(64, 62, 62, 0.1);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.showInput{
+    width: 100%;
+    height: 50%;
+}
+
+#result {
+    transition: color 0.2s ease;
+  }
+
+.showInput input {
+    height: 22vh;
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-align: right;
+    padding: 10px 15px;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    height: 42vh;
+    padding: 5px 10px;
+}
+
+.btn {
+    height: 45px;
+    width: 55px;
+    background: rgba(64, 62, 62, 0.1);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.equal {
+    grid-column: span 1;
+    transition: .10s ease-in-out;
+}
+
+.equal:hover {
+    background: #00c7ba;
+    color: black;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(0, 199, 186, 0.5);
+}
+  
+
+.zero {
+    width: 125px;
+    grid-column: span 2;
+}
+
+.operator{
+    color: rgb(255, 174, 0);
+}
+
+.operator:nth-child(1) {
+    color: aqua;
+}
+
+.operator:nth-child(2) {
+    color: aqua;
+}
+
+.operator:nth-child(3) {
+    color: aqua;
+}
+
+
+/* =============================
+   Dark Mode Styles
+============================= */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .calculator {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+body.dark-mode .btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode input {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+body.dark-mode .operator {
+    color: #00e6e6;
+}
