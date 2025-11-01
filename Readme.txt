@@ -6,6 +6,12 @@ This project is designed to showcase front-end development skills with clean cod
 
 ---
 
+## Preview
+
+![Calculator App Screenshot](./assets/preview.png)
+
+---
+
 ## Features
 
 - **Modern Glassmorphism Design**
